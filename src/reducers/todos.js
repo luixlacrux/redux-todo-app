@@ -29,6 +29,8 @@ const todos = (state = [], action) => {
       ]
     case 'TOGGLE_TODO':
       return state.map(t => todo(t, action))
+    case 'DELETE_TODO':
+      return state.filter(t => t.id !== action.id)
 
     default:
       return state
