@@ -4,8 +4,13 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './reducers'
 import App from './components/App'
+import './styles/index.css'
 
-let store = createStore(todoApp)
+let store = process.env.NODE_ENV !== 'production'
+  ? createStore(
+    todoApp, {},
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  ) : createStore(todoApp)
 
 render(
   <Provider store={store}>

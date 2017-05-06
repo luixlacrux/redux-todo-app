@@ -1,0 +1,27 @@
+.Link {
+  color: white;
+  text-decoration: none;
+  padding: .2em .4em;
+  border-radius: .3em;
+  margin: .2em;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.Link:first-child {
+  margin-left: 0;
+}
+.blue {
+  background: var(--blue);
+}
+.green {
+  background: var(--green);
+}
+.red {
+  background: var(--red);
+}
+.active {
+  cursor: default;
+  font-weight: bolder;
+  opacity: 1;
+  box-shadow: 0 1px 10px rgba(0,0,0, .5);
+}

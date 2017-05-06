@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
+import '../styles/components/Link.css'
 
-const Link = ({ active, children, onClick}) => {
-  if (active) {
-    return <span>{children}</span>
-  }
+const Link = ({ active, color, children, onClick }) => {
+  const className = active ? `Link ${color} active` : `Link ${color}`
 
   return (
     <a
       href="#"
+      className={className}
       onClick={e => {
        e.preventDefault()
        onClick()

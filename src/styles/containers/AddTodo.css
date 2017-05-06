@@ -1,0 +1,47 @@
+.AddTodo {
+  padding: 10px 0;
+  background: white;
+}
+
+.AddTodo-group {
+  display: flex;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  outline: none;
+  font-size: 18px;
+  color: var(--blue);
+}
+.input::selection {
+  background: var(--red);
+  color: white;
+}
+
+.button {
+  border: none;
+  background: var(--blue);
+  color: white;
+  height: 40px;
+  width: 40px;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+.button:hover {
+  background: var(--purple);
+  transform: scale(1.2);
+  box-shadow: 0 1px 6px rgba(0,0,0, .5)
+}
+.button:active {
+  transform: scale(1.1);
+}
+.button i {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  top: 2px;
+}

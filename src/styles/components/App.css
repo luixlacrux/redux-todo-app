@@ -1,0 +1,15 @@
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.App h1 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.App-container {
+  background: white;
+  border-radius: .3em;
+  overflow: hidden;
+  padding: 0 20px;
+}
