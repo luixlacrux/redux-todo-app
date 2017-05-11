@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import '../styles/components/Link.css'
 
 const Link = ({ active, color, children, onClick }) => {
