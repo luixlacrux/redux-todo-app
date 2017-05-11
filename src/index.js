@@ -15,7 +15,7 @@ let store = process.env.NODE_ENV !== 'production'
     todoApp,
     initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  ) : createStore(todoApp)
+  ) : createStore(todoApp, initialState)
 
 store.subscribe(throttle(() => {
   saveState({
