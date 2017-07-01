@@ -7,7 +7,6 @@ import {
 const todo = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
-      console.log(state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1)
       return {
         id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
         text: action.text,
