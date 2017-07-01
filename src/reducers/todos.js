@@ -4,11 +4,12 @@ import {
   DELETE_TODO
 } from '../actions'
 
-const todo = (state = {}, action) => {
+const todo = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
+      console.log(state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1)
       return {
-        id: action.id,
+        id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
         text: action.text,
         completed: false,
       }
@@ -30,7 +31,7 @@ const todos = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       return [
-        todo(undefined, action),
+        todo(state, action),
         ...state,
       ]
     case TOGGLE_TODO:
